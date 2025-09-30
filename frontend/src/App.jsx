@@ -15,19 +15,11 @@ export default function App() {
   const inputRef = useRef();
   const dropZoneRef = useRef();
 
-  // ... (existing imports) ...
-
-export default function App() {
-// ... (existing state and refs) ...
-
   // ***** REQUIRED CHANGE: Set the API Base URL *****
-  // We are temporarily hardcoding the live URL to ensure it is used,
-  // bypassing any potential environment variable setup issues.
-  // Change this line:
- const API_BASE_URL = "https://watermark-remover-api-eenv.onrender.com";
-  
+  // This is the correct, live URL for your Render backend.
+  const API_BASE_URL = "https://watermark-remover-api-eenv.onrender.com";
+
   const MAX_SIZE_MB = 10;
-// ... (rest of the file is correct) ...
 
   const validateFile = (f) => {
     if (!f.type.startsWith("image/")) {

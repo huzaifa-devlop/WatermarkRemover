@@ -8,7 +8,7 @@ import base64
 app = FastAPI()
 
 # Define the list of allowed origins (domains)
-# This is the crucial fix for your CORS error!
+# This list is updated with the current live domains:
 origins = [
     # 1. Local Development Origins
     "http://localhost:5173",  # Your local Vite dev server
@@ -16,8 +16,8 @@ origins = [
     "http://localhost:8000",
 
     # 2. Production Origins (Render and Vercel)
-    "https://watermark-remover-api-srp5.onrender.com",  # Your own Render API domain
-    "https://watermark-remover-eta.vercel.app"         # <-- YOUR LIVE VERCEL FRONTEND DOMAIN
+    "https://watermark-remover-api-eenv.onrender.com",  # Your confirmed Render API domain
+    "https://watermark-remover-ten.vercel.app"          # <-- LATEST VERCEL FRONTEND DOMAIN
 ]
 
 app.add_middleware(
@@ -33,7 +33,6 @@ API_KEY = "5d123808784a2a7ab0b930398c12ec46ff0385452a1618918af0a7c4465be21f"
 
 @app.post("/api/remove-watermark")
 async def remove_watermark(
-# ... (rest of the file is unchanged) ...
     file: UploadFile = File(...),
     mask: UploadFile = File(None)
 ):

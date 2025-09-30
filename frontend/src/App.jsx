@@ -23,8 +23,9 @@ export default function App() {
   // ***** REQUIRED CHANGE: Set the API Base URL *****
   // We are temporarily hardcoding the live URL to ensure it is used,
   // bypassing any potential environment variable setup issues.
-  const API_BASE_URL = "https://watermark-remover-api-srp5.onrender.com"; // <--- HARDCODED LIVE URL
-
+  // Change this line:
+ const API_BASE_URL = "https://watermark-remover-api-eenv.onrender.com";
+  
   const MAX_SIZE_MB = 10;
 // ... (rest of the file is correct) ...
 

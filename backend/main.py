@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 DEWATERMARK_API_URL = "https://platform.dewatermark.ai/api/object_removal/v1/erase_watermark"
-API_KEY = "5d123808784a2a7ab0b930398c12ec46ff0385452a1618918af0a7c4465be21f"
+API_KEY = "323254d38ec4395a27216bbc22cd940162b40fc39d12e36a9ee755b367e2a9ed"
 
 @app.post("/api/remove-watermark")
 async def remove_watermark(
